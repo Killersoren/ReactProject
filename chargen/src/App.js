@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import RandomName from "./RandomName";
+import Atributes from "./Atributes";
+import NameInput from "./NameInput";
 
 function NPCCreatorWithHooks() {
   let name = useFormInput("");
   let faction = useFormInput("");
   let reputation = useFormInput("Friendly");
-  let ramdomName = RandomName();
 
   return (
     <>
@@ -13,9 +13,9 @@ function NPCCreatorWithHooks() {
       <NPCForm name={name} faction={faction} reputation={reputation} />
       <h5>Result:</h5>
       <NameUI name={name.value} faction={faction.value} reputation={reputation.value} />
-      <h5>RandomName:</h5>
-      <RandomName />
-
+      <h5>Player Name:</h5>
+      <NameInput></NameInput>
+      <Atributes></Atributes>
 
     </>
   );
