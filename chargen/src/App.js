@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Atributes from "./Atributes";
+import RandomClass from "./ClassSelection";
 import NameInput from "./NameInput";
 
 function NPCCreatorWithHooks() {
@@ -16,6 +17,7 @@ function NPCCreatorWithHooks() {
       <h5>Player Name:</h5>
       <NameInput></NameInput>
       <Atributes></Atributes>
+      <RandomClass/>
 
     </>
   );

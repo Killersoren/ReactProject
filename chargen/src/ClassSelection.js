@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 
- const classes=['archer', 'warrier', 'warlock']
-
+ const classes=['archer', 'warrier', 'warlock'];
 let classElement = document.getElementById("class");
 
 const url = "https://www.dnd5eapi.co/api/classes";
 
+let classesList =[];
+// let characterClass = "";
 
 function RandomClass() { const [characterClass, newClass] = useState('archer');
 
@@ -20,8 +21,12 @@ function RandomClass() { const [characterClass, newClass] = useState('archer');
 
         <button onClick={() => {
             getRandomClass();
+            console.log(classesList);
+            newClass(classesList[Math.floor(Math.random()*classesList.length)])
+            }
 
-            newClass(classes[Math.floor(Math.random()*classes.length)])}
+          
+            
         }  >
 
 
@@ -40,6 +45,12 @@ function RandomClass() { const [characterClass, newClass] = useState('archer');
     const response = await fetch(url);
     const data = await response.json();
 
+    classesList = data.results;
+    // console.log("classes list =" + classesList);
+    // console.log("character class = " + characterClass);
+
+    // (data.results[Math.floor(Math.random()*data.results.length)])
+
     return data;
 
     // let tmpResult;
@@ -55,5 +66,6 @@ function RandomClass() { const [characterClass, newClass] = useState('archer');
     // .then(response => response.json())
     // .then(classObject => classObject.)
 }
+
 
 export default RandomClass;
