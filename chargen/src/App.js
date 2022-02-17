@@ -16,7 +16,7 @@ function NPCCreatorWithHooks() {
       <NameUI name={name.value} faction={faction.value} reputation={reputation.value} />
       <h5>Player Name:</h5>
       <NameInput></NameInput>
-      <Atributes></Atributes>
+      <Atributes >  </Atributes>
       <RandomClass/>
 
     </>
@@ -68,7 +68,8 @@ function NameUI(props) {
         width: "250px",
         color: getReputationColor(props.reputation),
         fontWeight: "bolder",
-        textAlign: "center"
+        textAlign: "center",
+        
       }}>
       <div>{props.name}</div>
       <div>{"<" + props.faction + ">"}</div>
