@@ -4,9 +4,6 @@ const url = "https://www.dnd5eapi.co/api/classes";
 let classesList = [];
 getRandomClass();
 
-
-
-
 function RandomClass() { const [ characterClass, newClass] = useState('archer');
 
     return (
@@ -15,13 +12,9 @@ function RandomClass() { const [ characterClass, newClass] = useState('archer');
             width: '100px',
             height: '100px'
           }}>
-    
             <h2>{characterClass}</h2>
-
         <button onClick={() => newClass(classesList[Math.floor(Math.random()*classesList.length)].name)
-  
         }  >
-
             New Class
         </button>
         </div>
@@ -30,6 +23,20 @@ function RandomClass() { const [ characterClass, newClass] = useState('archer');
 }
 
 
+function ChooseClass(){
+
+    return(
+
+        <>
+        <select name = "fdsgas">
+        <option value="Hostile">Hostile</option>
+        <option value="Neutral">Neutral</option>
+        <option value="Friendly">Friendly</option>
+        </select>
+        </>
+    );
+}
+
 
  async function getRandomClass()
 {
@@ -37,7 +44,6 @@ function RandomClass() { const [ characterClass, newClass] = useState('archer');
     const data = await response.json();
 
     classesList = data.results;
-
 
     return classesList;
 }

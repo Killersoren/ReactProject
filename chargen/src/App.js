@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Atributes from "./Atributes";
 import RandomClass from "./ClassSelection";
 import NameInput from "./NameInput";
+import RandomRace from "./raceSelection";
 
 function NPCCreatorWithHooks() {
   let name = useFormInput("");
@@ -18,6 +19,7 @@ function NPCCreatorWithHooks() {
       <NameInput></NameInput>
       <Atributes >  </Atributes>
       <RandomClass/>
+      <RandomRace/>
 
     </>
   );
