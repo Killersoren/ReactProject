@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MapCountry from "./MapCountry";
 import Atributes from "./Atributes";
 import RandomClass from "./ClassSelection";
 import NameInput from "./NameInput";
@@ -8,7 +9,9 @@ function NPCCreatorWithHooks() {
   let name = useFormInput("");
   let faction = useFormInput("");
   let reputation = useFormInput("Friendly");
-
+  // let s = useFormInput("1");
+  // let d = useFormInput("");
+  // let c = useFormInput("");
   return (
     <>
       <h3>NPC Creator</h3>
@@ -17,7 +20,10 @@ function NPCCreatorWithHooks() {
       <NameUI name={name.value} faction={faction.value} reputation={reputation.value} />
       <h5>Player Name:</h5>
       <NameInput></NameInput>
-      <Atributes >  </Atributes>
+      <Atributes/>
+      <MapCountry/>
+
+    {/* <Atributes s={s.value} c={c.value} d={d.value}/> */}
       <RandomClass/>
       <RandomRace/>
 
@@ -54,7 +60,7 @@ function NPCForm(props) {
         <option>Hostile</option>
       </select>
     </>
-  );
+  ); 
 }
 
 function NameUI(props) {

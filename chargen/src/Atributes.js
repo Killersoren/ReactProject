@@ -14,18 +14,12 @@ function Atributes(props) {
   const [intellegence, setIntValue] = useState("");
   const [charisma, setChaValue] = useState("");
 
-  function handleChange(event) {
-    setStrValue(event.target.value) &&
-    setDexValue(event.target.value) &&
-    setConValue(event.target.value) &&
-    setWisValue(event.target.value) &&
-    setChaValue(event.target.value) &&
 
-    setIntValue(event.target.value);
-  }
+ 
+
 
   return (
-    <div id="RandomName-container"style={{
+    <div id="Atributes-container"style={{
       backgroundColor: 'grey',
       width: '1920px',
       height: '100px',
@@ -36,8 +30,8 @@ function Atributes(props) {
     }}>
     
       <button onClick={() =>{
- setStrValue(str[Math.floor(Math.random()*str.length)]);
- setDexValue(dex[Math.floor(Math.random()*dex.length)]);
+setStrValue(str[Math.floor(Math.random()*str.length)]);
+  setDexValue(dex[Math.floor(Math.random()*dex.length)]);
  setConValue(con[Math.floor(Math.random()*con.length)]);
  setWisValue(wis[Math.floor(Math.random()*wis.length)]);
  setIntValue(int[Math.floor(Math.random()*int.length)]);
@@ -50,18 +44,16 @@ function Atributes(props) {
       {/* <input value={strength} onChange={handleChange} />
       <input value={dexterity} onChange={handleChange} /> */}
 
-      <p style={{color: "red", position: "absolute", left: 0}}>strength: {strength}</p>
+      {/* <p style={{color: "red", position: "absolute", left: 0}}>strength: {props.s }</p> */}
+      <p style={{color: "red", position: "absolute", left: 0}}>strength: {strength }</p>
       <p style={{color: "green", position: "absolute", left: 300}}>dexterity: {dexterity}</p>
       <p style={{color: "black", position: "absolute", left: 600}}>constitution: {constitution}</p>
       <p style={{color: "white", position: "absolute", left: 900}}>wisdom: {wisdom}</p>
       <p style={{color: "blue", position: "absolute", left: 1200}}>intellegence: {intellegence}</p>
       <p style={{color: "yellow", position: "absolute", left: 1500}}>charisma: {charisma}</p>
-     
-
     </div>
   );
 }
-
 
 
 
