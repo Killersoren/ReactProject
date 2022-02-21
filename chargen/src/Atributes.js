@@ -29,7 +29,8 @@ function Atributes(props) {
 
     }}>
     
-      <button onClick={() =>{
+      <button onMouseOver={changeBackground} onMouseOut = {resetBackground}
+       onClick={() =>{
 setStrValue(str[Math.floor(Math.random()*str.length)]);
   setDexValue(dex[Math.floor(Math.random()*dex.length)]);
  setConValue(con[Math.floor(Math.random()*con.length)]);
@@ -55,8 +56,12 @@ setStrValue(str[Math.floor(Math.random()*str.length)]);
   );
 }
 
+function changeBackground(e) {
+  e.target.style.background = 'red';
+}
 
-
-
+function resetBackground(e) {
+  e.target.style.background = 'white';
+}
 
 export default Atributes;
