@@ -9,7 +9,6 @@ function MapCountry() {
       height: '100px',
       position: "absolute",
       top: 1000,
-     //right: 0,
 
     }}><h3>Country Names (mapping)</h3>
          <p style={{color: "red", 
@@ -17,11 +16,10 @@ function MapCountry() {
          top: -10,
          left: 0}}>Chosen contry: {value }</p>
 
-    {/* {countryNames.map(p =>
-      <div>{p}</div>)} */}
+  
 
-{countryNames.map(name => (
-        <li>
+{countryNames.map((name, key) => (
+        <li key={key}> 
           <button onClick={() => setValue(name)}>
           {name}
           </button>

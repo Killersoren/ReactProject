@@ -22,13 +22,24 @@ function NameInput(props) {
     }}>
     
       <input value={value} onChange={handleChange} />
-      <button onClick={() => setValue(playerNames[Math.floor(Math.random()*playerNames.length)] +" "+ playerNames[Math.floor(Math.random()*playerNames.length)])}>
+      <button onClick={Setnamerandom}>
             New Random Name
         </button>
       <p>Name: {value}</p>
       
     </div>
+
+
+
   );
+
+  function Setnamerandom()
+  { 
+      setValue(playerNames[Math.floor(Math.random()*playerNames.length)] +" "+ playerNames[Math.floor(Math.random()*playerNames.length)]);
+            
+      
+  }
 }
+
 
 export default NameInput;

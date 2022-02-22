@@ -4,14 +4,13 @@ import Atributes from "./Atributes";
 import RandomClass from "./ClassSelection";
 import NameInput from "./NameInput";
 import RandomRace from "./raceSelection";
+import { playerNames } from "./names";
 
 function NPCCreatorWithHooks() {
   let name = useFormInput("");
   let faction = useFormInput("");
   let reputation = useFormInput("Friendly");
-  // let s = useFormInput("1");
-  // let d = useFormInput("");
-  // let c = useFormInput("");
+
   return (
     <>
       <h3>NPC Creator</h3>
@@ -19,13 +18,12 @@ function NPCCreatorWithHooks() {
       <h5>Result:</h5>
       <NameUI name={name.value} faction={faction.value} reputation={reputation.value} />
       <h5>Player Name:</h5>
-      <NameInput></NameInput>
+      {/* <NameInput></NameInput> */}
       <Atributes/>
       <MapCountry/>
-
-    {/* <Atributes s={s.value} c={c.value} d={d.value}/> */}
       <RandomClass/>
       <RandomRace/>
+
 
     </>
   );
@@ -47,6 +45,10 @@ function NPCForm(props) {
       <label>Name:</label>
       <br />
       <input {...props.name}></input>
+      <button onClick={Setnamerandom}>
+            New Random Name
+        </button>
+      
       <br />
       <label>Faction:</label>
       <br />
@@ -60,7 +62,15 @@ function NPCForm(props) {
         <option>Hostile</option>
       </select>
     </>
+    
   ); 
+  function Setnamerandom(props)
+  { 
+   
+    return <>
+    { props.name = (playerNames[Math.floor(Math.random()*playerNames.length)] +" "+ playerNames[Math.floor(Math.random()*playerNames.length)])}
+    </>
+  }
 }
 
 function NameUI(props) {
@@ -82,7 +92,10 @@ function NameUI(props) {
       <div>{props.name}</div>
       <div>{"<" + props.faction + ">"}</div>
     </div>
+    
   );
+ 
+ 
 }
 
 export default NPCCreatorWithHooks;
