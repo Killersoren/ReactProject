@@ -18,7 +18,7 @@ function NPCCreatorWithHooks() {
       <h5>Result:</h5>
       <NameUI name={name.value} faction={faction.value} reputation={reputation.value} />
       <h5>Player Name:</h5>
-      {/* <NameInput></NameInput> */}
+      <NameInput></NameInput>
       <Atributes/>
       <MapCountry/>
       <RandomClass/>
@@ -46,7 +46,7 @@ function NPCForm(props) {
       <br />
       <input {...props.name}></input>
       <button onClick={Setnamerandom}>
-            New Random Name
+            New Random Name 2
         </button>
       
       <br />

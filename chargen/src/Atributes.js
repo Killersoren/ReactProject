@@ -7,7 +7,6 @@ const int=[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 const cha=[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 let totalStats= [0,0,0,0,0,0];
 let evenStats = [];
-let testList = [3,2,6,1,5,12];
 
 function Atributes(props) {
   const [strength, setStrValue] = useState("");
@@ -108,7 +107,7 @@ function filterTotalStats(array, callbackFilter){
 
 let evenStatsFilter = item => {
   let isNumber = typeof item === "number";
-  return isNumber && item % 2 == 0;
+  return isNumber && item % 2 === 0;
 }
 
 // let evenStats = filterTotalStats(totalStats, evenStatsFilter)
