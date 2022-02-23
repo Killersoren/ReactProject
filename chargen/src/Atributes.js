@@ -6,6 +6,8 @@ const wis=[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 const int=[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 const cha=[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 let totalStats= [0,0,0,0,0,0];
+let evenStats = [];
+let testList = [3,2,6,1,5,12];
 
 function Atributes(props) {
   const [strength, setStrValue] = useState("");
@@ -56,7 +58,11 @@ function Atributes(props) {
 
             Random Stats
         </button>
+  
+
+
 { updateTotalStats()}
+{  evenStats = filterTotalStats(totalStats, evenStatsFilter)}
       {/* <input value={strength} onChange={handleChange} />
       <input value={dexterity} onChange={handleChange} /> */}
 
@@ -83,5 +89,29 @@ function sum(var1, var2 , var3, var4, var5, var6)
 {
   return var1 + var2 + var3 + var4 + var5 + var6;
 }
+
+
+
+function filterTotalStats(array, callbackFilter){
+  let resultArray = [];
+
+  array.forEach(element => {
+    let includeElement = callbackFilter(element);
+    if (includeElement) {
+      resultArray.push(element)
+    }
+  });
+
+  return resultArray;
+
+}
+
+let evenStatsFilter = item => {
+  let isNumber = typeof item === "number";
+  return isNumber && item % 2 == 0;
+}
+
+// let evenStats = filterTotalStats(totalStats, evenStatsFilter)
+
 
 export default Atributes;
