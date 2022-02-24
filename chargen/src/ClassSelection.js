@@ -13,7 +13,6 @@ function RandomClass() { const [ characterClass, newClass] = useState('archer');
             height: '100px'
           }}>
             <h2>{characterClass}</h2>
-            {/* <ChooseClass/> */}
 
         <button onClick={() => newClass(classesList[Math.floor(Math.random()*classesList.length)].name)
         }  >
@@ -22,22 +21,6 @@ function RandomClass() { const [ characterClass, newClass] = useState('archer');
         </div>
     );
 }
-
-
-// function ChooseClass(){
-
-//     return(
-        
-//         <>
-//         <select name = "Choose clase">
-//         <option value="Hostile">Hostile</option>
-//         <option value="Neutral">Neutral</option>
-//         <option value="Friendly">Friendly</option>
-//         </select>
-//         </>
-//     );
-// }
-
 
  async function getRandomClass()
 {

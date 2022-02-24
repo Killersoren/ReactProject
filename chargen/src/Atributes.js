@@ -16,9 +16,6 @@ function Atributes(props) {
   const [intellegence, setIntValue] = useState("");
   const [charisma, setChaValue] = useState("");
 
-
- 
-
   function updateTotalStats()
   {
        totalStats[0] = strength;
@@ -32,11 +29,10 @@ function Atributes(props) {
   return (
     <div id="Atributes-container"style={{
       backgroundColor: 'grey',
-      width: '1920px',
+      width: '1800px',
       height: '100px',
       position: "absolute",
-     top: 850,
-     //right: 0,
+     top: 350,
 
     }}>
     
@@ -48,24 +44,14 @@ function Atributes(props) {
  setWisValue(wis[Math.floor(Math.random()*wis.length)]);
  setIntValue(int[Math.floor(Math.random()*int.length)]);
  setChaValue(cha[Math.floor(Math.random()*cha.length)]);
-
       }
-
-      
          }>
-
-
             Random Stats
         </button>
   
-
-
 { updateTotalStats()}
 {  evenStats = filterTotalStats(totalStats, evenStatsFilter)}
-      {/* <input value={strength} onChange={handleChange} />
-      <input value={dexterity} onChange={handleChange} /> */}
 
-      {/* <p style={{color: "red", position: "absolute", left: 0}}>strength: {props.s }</p> */}
       <p style={{color: "red", position: "absolute", left: 0}}>strength: {strength }</p>
       <p style={{color: "green", position: "absolute", left: 300}}>dexterity: {dexterity}</p>
       <p style={{color: "black", position: "absolute", left: 600}}>constitution: {constitution}</p>
@@ -109,8 +95,5 @@ let evenStatsFilter = item => {
   let isNumber = typeof item === "number";
   return isNumber && item % 2 === 0;
 }
-
-// let evenStats = filterTotalStats(totalStats, evenStatsFilter)
-
 
 export default Atributes;

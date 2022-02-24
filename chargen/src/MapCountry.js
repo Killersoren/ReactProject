@@ -6,17 +6,16 @@ function MapCountry() {
   
     return (
        <div id="MapCountry-container"style={{
-      height: '100px',
+      height: '50px',
       position: "absolute",
-      top: 1000,
+      backgroundColor: 'grey',
+      top: 500,
 
     }}><h3>Country Names (mapping)</h3>
          <p style={{color: "red", 
          position: "absolute", 
          top: -10,
          left: 0}}>Chosen contry: {value }</p>
-
-  
 
 {countryNames.map((name, key) => (
         <li key={key}> 
@@ -25,11 +24,7 @@ function MapCountry() {
           </button>
         </li>
       ))}
-
 </div>
-        
     );
   }
-
-
 export default MapCountry;
