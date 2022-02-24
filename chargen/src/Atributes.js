@@ -57,21 +57,15 @@ function getEvenStats()
  setChaValue(cha[Math.floor(Math.random()*cha.length)]);
       }
          }>
-           {test1 ? console.log("test") : console.log("noTest")}
             Random Stats
         </button>
   
 { updateTotalStats()}
-{/* {  evenStats = filterTotalStats(totalStats, evenStatsFilter)} */}
 {getEvenStats()}
-{/* {console.log(evenStats[0])}
-{console.log(totalStats[0])} */}
 
-{/* {console.log(totalStats[0] === evenStats[0] ? "yes" : "no")} */}
 {totalStats[0] === evenStats[0] ? test1 = true : test1 = false}
 {console.log(test1)}
 <>
-      {/* <p style={{color: "red", position: "absolute", left: 0, textDecorationLine : "underline" }}>strength: {strength }</p> */}
       <p style={{color: "green", position: "absolute", left: 300,      }}>dexterity: {dexterity}</p>
       <p style={{color: "black", position: "absolute", left: 600,  }}>constitution: {constitution}</p>
       <p style={{color: "white", position: "absolute", left: 900, }}>wisdom: {wisdom}</p>
