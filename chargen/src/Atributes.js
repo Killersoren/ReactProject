@@ -71,7 +71,7 @@ function getEvenStats()
 {totalStats[0] === evenStats[0] ? test1 = true : test1 = false}
 {console.log(test1)}
 <>
-      <p style={{color: "red", position: "absolute", left: 0, textDecorationLine : "underline" }}>strength: {strength }</p>
+      {/* <p style={{color: "red", position: "absolute", left: 0, textDecorationLine : "underline" }}>strength: {strength }</p> */}
       <p style={{color: "green", position: "absolute", left: 300,      }}>dexterity: {dexterity}</p>
       <p style={{color: "black", position: "absolute", left: 600,  }}>constitution: {constitution}</p>
       <p style={{color: "white", position: "absolute", left: 900, }}>wisdom: {wisdom}</p>
@@ -83,7 +83,7 @@ function getEvenStats()
       {(() => {
         if (test1) {
           return (
-            <div>someCase
+            <div>
 
 <p style={{color: "red", position: "absolute", left: 0, textDecorationLine : "underline" }}>strength: {strength }</p>
 
@@ -93,7 +93,7 @@ function getEvenStats()
           )
         } else if (!test1) {
           return (
-            <div>otherCase
+            <div>
 
 <p style={{color: "red", position: "absolute", left: 0, }}>strength: {strength }</p>
 
